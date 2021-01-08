@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="styles/registration.css">
+    <link rel="stylesheet" href="./styles/tasks.css">
+    <link rel="stylesheet" href="./styles/header.css">
+</head>
+
+<body>
+    <header class="wrapper">
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="logo" width="40px">
+            <h1>ToDo</h1>
+        </div>
+        <div class="header--user">
+            <p id="sayHi"></p>
+            <button id="exit">Выход</button>
+        </div>
+    </header>
+    <main class="wrapper">
+        <div class="search_task"></div>
+        <div class="my_tasks">
+            <h2 class="title_blocks1">Мои задачи</h2>
+        </div>
+        <div class="ready_tasks">
+            <h2 class="title_blocks2">Выполненные задачи</h2>
+        </div>
+        <div class="add_task">
+            <div class="add_task--box">
+                <input id="addTask" type="text" value="Новая задача">
+                <div class="plus">+</div>
+            </div>
+        </div>
+    </main>
+    <div class="registration--box">
+        <div class="registration">
+            <img src="./assets/logo.svg" class="registration--logo" alt="datamola"></img>
+            <p>Регистрация</p>
+            <input type="text" class="registration--user_name" value="Имя пользователя">
+            <input type="text" class="registration--password" value="Пароль">
+            <button id="registrationButton">Войти</button>
+            <div id="registrationButton" class="echo"></div>
+        </div>
+    </div>
+    <script src="./scripts/help.js"></script>
+    <script src="./scripts/registration.js"></script>
+    <script src="./scripts/tasks2.js"></script>
+</body>
+
+</html>

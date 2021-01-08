@@ -1,0 +1,35 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo h1 {
+    font-weight: 100;
+    cursor: default;
+}
+.header--user {
+    display: flex;
+    align-items: center;
+}
+#sayHi {
+    cursor: default;
+}
+#exit {
+    height: 25px;
+    padding: 2px 10px;
+    background-color: #ffc107;
+    color: #fcfcfc;
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    outline: none;
+    font-weight: 600;
+}
+#exit:hover {
+    cursor: pointer;
+    background-color: #a35dab;
+    transition: all 0.1s linear;
+}
+.header--user button:not(:hover) {
+    transition: all 0.1s linear;
+}

@@ -1,0 +1,110 @@
+/* ----MY-TASKS--- */
+.my_tasks::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+.my_tasks::-webkit-scrollbar-button {
+    background-color: #a25fce;
+}
+.my_tasks::-webkit-scrollbar-track {
+    background-color: #d0d0d0;
+}
+.my_tasks::-webkit-scrollbar-track-piece {
+    background-color: #d0d0d0;
+}
+.my_tasks::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color: #a25fce;
+    border-radius: 3px;
+}
+.my_tasks::-webkit-scrollbar-corner {
+    background-color: #d0d0d0;
+}
+.my_tasks::-webkit-resizer {
+    background-color: #a25fce;
+}
+.title_blocks1,
+.title_blocks2 {
+    color: rgb(90 90 90);
+    font-weight: 700;
+    font-size: 20px;
+}
+.task {
+    display: grid;
+    position: relative;
+    height: 45px;
+    grid-template-columns: 35px auto 35px 35px;
+    margin: 15px 0;
+    padding: 10px 0px 10px 15px;
+    align-items: center;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: none;
+    /* transition: box-shadow 0.1s linear; */
+    transition: all 0.2s linear;
+}
+.task:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 0px #a25fce;
+}
+.task_text {
+    border: none;
+    background: none;
+    color: #717171;
+    cursor: pointer;
+}
+.task_img {
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s linear;
+}
+.task_img:hover {
+    cursor: pointer;
+}
+.task--edit_btn:hover,
+.task--remove_btn:hover {
+    transform: scale(1.2);
+}
+.task_date {
+    position: absolute;
+    left: 10px;
+    max-width: 85px;
+    opacity: 0;
+    color: #717171;
+}
+/* ----READY-TASKS---- */
+
+/* ----ADD-TASKS---- */
+
+.add_task--box {
+    position: relative;
+    width: max-content;
+    margin: 25px auto;
+}
+#addTask {
+    border: none;
+    border-radius: 7px;
+    height: 50px;
+    width: 250px;
+    padding-left: 12px;
+}
+.plus {
+    background-color: #69c480;
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-weight: 900;
+    color: #fcfcfc;
+    position: absolute;
+    top: -12px;
+    right: -32.5px;
+}
+.plus:hover {
+    background-color: #1bb463;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
