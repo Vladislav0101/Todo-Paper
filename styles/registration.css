@@ -24,6 +24,7 @@
     justify-items: center;
     text-align: center;
     padding-bottom: 20px;
+    box-shadow: 0 0 20px 4px #0000001c;
 }
 .registration--logo {
     width: 50px;

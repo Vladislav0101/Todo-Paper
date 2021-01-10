@@ -29,7 +29,7 @@ userNameBlock.onblur = () => {
         userNameBlock.value = 'Имя пользователя';
     }
 };
-passwordBlock.onclick = (e) => {
+passwordBlock.onclick = () => {
     if (passwordBlock.value === 'Пароль') {
         passwordBlock.value = '';
     }
@@ -41,9 +41,11 @@ passwordBlock.onblur = () => {
     }
 };
 HELP.elementById('registrationButton').onclick = () => {
+    localStorage.setItem('sort', 'date');
     let userName = (userNameBlock.value && userNameBlock.value.trim().toLowerCase() !== 'имя пользователя') ? userNameBlock.value : 0,
         password = (passwordBlock.value && passwordBlock.value.trim().toLowerCase() !== 'пароль') ? passwordBlock.value : 0;
     if (userName && password) {
+        obj.initMyTasks();
         registration.USER_INFO.user = userNameBlock.value;
         registration.USER_INFO.password = passwordBlock.value;
         registration.USER_INFO.login = true;

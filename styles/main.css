@@ -9,7 +9,7 @@ html,
     color: #717171;
 }
 body {
-    background-color: #d0d0d0;
+    background-color: #e8c4ff;
 }
 input {
     outline: none;
@@ -21,35 +21,101 @@ input {
 header {
     height: 80px;
     width: 100%;
-    background-color: #e8e8e8;
+    background-color: #ffffff70;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    box-shadow: 0 -5px 20px 20px #e8e8e8;
+    box-shadow: 0 -5px 20px 20px #ffffff70;
 }
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 75px;
+    grid-column-gap: 2%;
     padding: 10px 20px;
 }
-.search_task {
-    /* background-color: burlywood; */
-    height: 400px;
+.sort_task {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 .my_tasks {
-    /* background-color: chartreuse; */
     height: 400px;
-    /* overflow-y: auto; */
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 10px;
 }
 .ready_tasks {
-    /* background-color: crimson; */
     height: 400px;
     padding: 10px;
 }
 .add_task {
     height: 75px;
     grid-column: span 3;
+}
+
+@media (max-width: 992px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .my_tasks,
+    .ready_tasks {
+        padding: 10px 15%;
+    }
+    .sort_task {
+        grid-area: 2/1/3/2;
+    }
+    .add_task {
+        grid-column: auto;
+    }
+}
+@media (max-width: 810px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .my_tasks,
+    .ready_tasks {
+        padding: 25px 0;
+        height: auto;
+        max-height: 400px;
+    }
+    .add_task {
+        display: flex;
+        justify-content: center;
+    }
+    .add_task--box {
+        position: fixed !important;
+        bottom: 0;
+        width: 100% !important;
+        max-width: 350px;
+        margin: 0 !important;
+    }
+    #addTask {
+        width: 100% !important;
+    }
+    .sort_task {
+        grid-area: auto;
+    }
+    .filter_task {
+        display: none !important;
+    }
+    .task {
+        margin: 15px auto !important;
+    }
+    .title_blocks1,
+    .title_blocks2 {
+        text-align: center !important;
+    }
+    .plus {
+        border-radius: 0 7px 7px 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+@media (max-width: 400px) {
+    .my_tasks {
+        overflow-x: auto;
+    }
 }
